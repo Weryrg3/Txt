@@ -1,0 +1,128 @@
+
+######################################## Cap 1 ##########################################
+
+### Pegue a pílula vermelha
+
+- A programação deve ser sobre a transformação de dados
+	Modelar dados não criar
+- Combine transformações com oleodutos (Pipelines)
+	(x) Task.async	/ Livro irá explicar depois (Maybe)
+- Funções são transformadores de dados
+- IEX
+	IEx.configure [inspect: [limit: :infinity]] #printa até infinitos números, executar toda vez que abre o IEX. :(
+
+			   Part I Programação Convencional
+
+######################################## Cap 2 ##########################################
+
+### Pattern Matching	->	Correspondência de padrões
+
+- Atribuição: Eu não penso que isso significa o que você pensa significa.
+
+######################################## Cap 3 ##########################################
+
+### Imutabilidade
+
+######################################## Cap 4 ##########################################
+
+### Elixir Basics
+	Elixir’s built-in types are
+		• Value types:
+			– Arbitrary-sized integers	OK
+			– Floating-point numbers	Ok
+			– Atoms				Ok
+			– Ranges			Ok
+			– Regular expressions
+		• System types:
+			– PIDs and ports
+			– References
+		• Collection types:
+			– Tuples			 OK / 100%
+			– Lists				 OK / 100%
+			– Maps				 OK 
+			– Binaries			 OK
+
+- Integer
+	Podem ser escritos de diversas formas:
+	decimal     ->	1234 	= 1234		# base 10
+	hexadecimal ->	0xcafe 	= 51966		#0x base 16
+	octal  	    ->	0o765  	= 501		#0o base 8
+	binary      ->	0b1010 	= 10		#0b base 2
+- Float
+	0.2456
+	1.0
+	0.314159e1	= 3.14159
+	314159.0e-5	= 3.14159
+	0.10e2		= 10.0
+	0.10-e2		= 0.001
+- Atom
+	:wesley
+	:"tste"
+	:"func/3"
+	:is_binary?
+- Range
+	1 .. 5
+- Regular Expressions	___________________________________________________ Pg. 25_______
+	f,g,i,m,s,U,u,x(...)
+	Regex.run ~r{[aeiou]}, "caeaito"	= ["a"]
+	Regex.scan ~r/[ato]/, "testantdo"	= [["t"], ["t"], ["a"], ["t"], ["o"]]
+
+.. error  = :enoent significa que o arquivo não existe
+- Keyword List
+	a = [t: :teste, h: :home, t: :teste2]	[t: :teste, h: :home, t: :teste2]
+	a[:t]	:teste		Acesso a uma key em Keyword List
+	permite que uma key seja repetida (t:)
+- Map
+	b = %{"t" => "teste", "h" => "home", "t" => "teste2"}	
+		%{"h" => "home", "t" => "teste2"}
+	b["t"]	Acesso a uma key em map
+	NÃO permite que uma key seja repetida
+
+	colors = %{ red: "verm", green: "verd", blue: "azul" }
+	Map com key, permite duas formas de acesso
+	colors[:red]
+	colors.red
+
+- With ____________________________________________________________________ Pg. 36_______
+
+	Pode ser usado para definar algumas váriaveis temporárias.
+
+######################################## Cap 5 ##########################################
+
+### Funções Anônimas
+	funções anônimas chamam com ponto soma.(4, 4) dif nomeadas soma(4, 4)
+
+######################################## Cap 6 ##########################################
+
+### Módulos e funções nomeadas
+	Default, coloca valores onde falta exemplo:
+	1 => [a1 \\ 2, a2, a3, a4 \\ 3] nesse caso default está configurado para colocar 			valores no começo e no final. 
+	2 => [a1, a2 \\ 2, a3 \\ 3, a4] nesse caso default está configurado para colocar 			valores no meio.
+	Ex:
+	1 => ("A", "B") = [2, "A", "B", 3]
+	2 => ("A", "B") = ["A", 2, 3, "B"]
+
+	ModulesAndFunctions-6 ______________________________________________ Pg. 56______
+
+- Import
+	import Integer, only: [to_string: 2, gcd: 2]
+
+	Alias _____________________________________________________________ Pg. 60_______
+
+	ModulesAndFunctions-7 ______________incompleto_____________________ Pg. 63_______
+
+######################################## Cap 7 ##########################################
+
+### Listas e Rercursão
+
+	PUlando páginas 69 - 73
+	
+######################################## Cap 8 ##########################################
+
+### Maps, Keyword Lists, Sets, and Structs
+
+	keyword canvas estudar mais __________________________________________Pg. 80_____
+	pág 83, PM vocẽ só pode pegar valor e não keys
+
+
+

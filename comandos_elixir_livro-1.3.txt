@@ -1,0 +1,566 @@
+# teste.exs
+IO.puts "Hello, World"
+
+elixir teste.exs	executar pelo terminal (n/compiler)
+iex> c "teste.exs"	executar pelo terminal (compiler)
+
+a = 1	operador matemático	# Parttern match 
+1 = a	
+2 = a	Erro 2 não é igual a 1
+
+list = [1, 2, 3]	lista 
+[a, b, c] = list	atribui as variaveis ou operador matematico
+# a = 1, b = 2, c = 3
+
+list = [1, 2, [3, 4, 5 ] ]
+# c = [3, 4, 5]
+
+[a] = [ [ 1, 2, 3 ] ]
+[[a]] = [[[1, 2, 3] ] ]
+
+[1, _. _] = [1, 2, 3]	Underline(underscore) serve para valores que não serão ou não estão sendo usados
+
+[a, a] = [1, 1]
+[b, b] = [1, 2]	#erro
+
+a = 1 
+^a = 1	Verifica se a variavel é 1 (true)
+^a = 2	Erro
+^a = 2 - a	(true)
+
+list1 = [2, 3, 4]	listas são imutaveis
+list2 = [1 | list1]	# [1, 2, 3, 4]
+
+name = "elixir"
+cap_name = String.capitalize name	#"Elixir"
+name	#"elixir"
+
+Regex.run ~r{[aeiou]}, "caterpillar"	#["a"]
+
+Regex.scan ~r{[aeiou]}, "caterpillar"	#[["a"], ["e"], ["i"], ["a"]]
+
+Regex.split ~r{[aeiou]}, "caterpillar"	#["c", "t", "rp", "ll", "r"]
+
+Regex.replace ~r{[aeiou]}, "caterpillar", "*"	#"c*t*rp*ll*r"
+
+{status, count, action} = {:ok, 42, "next"}	#Tuplas #:ok - type(atom)
+
+[ 1, 2, 3 ] ++ [ 4, 5, 6 ]	#[1, 2, 3, 4, 5, 6]
+[1, 2, 3, 4] -- [2, 4]		#[1, 3]
+1 in [1,2,3,4]			#true
+"wombat" in [1, 2, 3, 4]	#false
+
+Maps 
+
+states = %{ "AL" => "Alabama", "WI" => "Wisconsin" }	#%{"AL" => "Alabama", "WI" => "Wisconsin"}
+
+%{ "one" => 1, :two => 2, {1,1,1} => 3 }	#%{:two => 2, {1, 1, 1} => 3, "one" => 1}
+
+name = "José Valim"	#"José Valim"
+%{ String.downcase(name) => name }	#%{"josé valim" => "José Valim"}
+
+states = %{ "AL" => "Alabama", "WI" => "Wisconsin" }	#%{"AL" => "Alabama", "WI" => "Wisconsin"}
+states["AL"]	#"Alabama"	#Acessando um item do mapa @@(tuples?, dic?)
+
+Binários
+
+bin = <<3 :: size(2), 5 :: size(4), 1 :: size(2)>>	#<<213>>
+:io.format("~-8.2b~n", :binary.bin_to_list(bin))	#11 0101 01	:ok
+byte_size bin	#1
+
+Operadores
+
+1 === 1.0	#false	#operador rígido
+1 !== 1.0	#true	#operador rígido
+1 == 1.0	#true
+1 != 1.0	#false
+1 > 1.0		#false
+1 >= 1.0	#true
+1 < 1.0		#false
+1 <= 1.0	#true
+
+1 || 1.0	#true	# Ou (or)	# verifica primeiro a esquerda se for verdadeiro retorna o valor da esquerda, caso contrário, retorna o valor da direita.
+
+1 && 1.0	#true	# E (and)	# verifica o segundo valor se for verdadeiro retorna o valor da direita, caso contrário, retorna o valor da esquerda.
+
+!1		#false	#(!a) (not)
+
++ - * / div rem
+
+4 / 2		# 2.0
+div(4, 2)	# 2	#divisão inteira
+rem(7, 2)	# 1	#resto da divisão
+
+list1 ++ list2		# concatena duas lista
+list1 -- list2		# concatena duas listas (remove)
+	exempl:
+	list1 = [1, 2, 3, 4]
+	list2 = [4, 5, 6]
+	list1 ++ list2	# [1, 2, 3, 4, 4, 5, 6]
+	list1 -- list2	# [1, 2, 3]
+
+binary1 <> binary2	# concatena dois binários ou strings, verificar melhorar está operação
+
+With
+
+with [a|_] <- [1,2,3], do: a	#1
+
+mean = with count = Enum.count(values),
+           sum = Enum.sum(values)
+	do
+	  sum/count
+	end
+
+mean = with(
+	count = Enum.count(values),
+	sum = Enum.sum(values)
+	do
+		sum/count
+	end)
+
+mean = with count = Enum.count(values),
+	sum = Enuhead m.sum(values),
+	do: sum/count
+
+Funções
+
+fn
+end
+
+sum = fn(a, b) -> a + b end
+sum.(4, 6)	#10
+
+greet = fn -> IO.puts "Hello, World" end
+greet.()	# Hello, World	:0k
+
+#{a, b} = {1, 2}
+
+swap = fn { a, b } -> {b, a} end 
+swap.({8, 1})	#{1, 8}
+
+soma = fn(a, b, c) -> a + b + c end
+soma.(1, 2, 3)	#6
+
+list_concat = fn([a, b], [c, d]) -> [a, b] ++ [c, d] end
+list_concat.([:a, :b], [:c, :d]) # [:a, :b, :c, :d]
+
+tuplist = fn({a, b}) -> [a, b] end
+tuplist.({ 1234, 5678})           #[1234, 5678]
+
+handle_open = fn
+    {:ok, file} -> "Read data: #{IO.read(file, :line)}"
+    {_,error} -> "Error: #{:file.format_error(error)}"
+end
+
+handle_open.(File.open("teste.exs"))	#"Read data: IO.puts \"Hello, World\"\n"
+
+fun1 = fn -> fn -> "Hello" end end
+fun1.().()	#Hello
+other = fun1.()
+other.()	#Hello
+
+greeter = fn name -> (fn -> "Hello #{name}" end) end	#Function<12.17052888 in :erl_eval.expr/5>
+dave_greeter = greeter.("Dave")		#Function<12.17052888 in :erl_eval.expr/5>
+dave_greeter.()		#"Hello Dave"
+
+add_n = fn n -> (fn other -> n + other end) end		#Function<12.17052888 in :erl_eval.expr/5>
+add_two = add_n.(2)	#Function<12.17052888 in :erl_eval.expr/5>
+add_five = add_n.(5)	#Function<12.17052888 in :erl_eval.expr/5>
+add_two.(3)	# 5
+add_five.(7)	# 12
+
+times_2 = fn n -> n * 2 end				#Function<12.17052888 in :erl_eval.expr/5>
+iex> apply = fn (fun, value) -> fun.(value) end		#Function<12.17052888 in :erl_eval.expr/5>
+iex> apply.(times_2, 6)		# 12
+
+list = [1, 3, 5, 7, 9]		#[1, 3, 5, 7, 9]
+Enum.map list, fn elem -> elem * 2 end		#[2, 6, 10, 14, 18]
+Enum.map list, fn elem -> elem * elem end	#[1, 9, 25, 49, 81]
+Enum.map list, fn elem -> elem > 6 end		#[false, false, false, true, true]
+
+defmodule Greeter do
+  def for(name, greeting) do
+    fn
+      (^name) -> "#{greeting} #{name}"
+      (_)     -> "I don't know you"
+    end
+  end
+end
+
+mr_valim = Greeter.for("José", "Oi!")
+IO.puts mr_valim.("José")	# => Oi! José
+IO.puts mr_valim.("dave")	# => I don't know you
+
+add_one = &(&1 + 1)	# same as add_one = fn (n) -> n + 1 end
+add_one.(44)		45
+
+square = &(&1 * &1)
+square.(8)		64
+
+speak = &(IO.puts(&1))
+speak.("Hello")		Hello	:ok
+
+divrem = &{ div(&1,&2), rem(&1,&2) }
+divrem.(13, 5)		{2, 3}
+
+l = &length/1
+l.([1,3,5,7])		4
+
+len = &Enum.count/1
+len.([1,2,3,4])		4
+
+m = &Kernel.min/2
+m.(99,88)		88
+
+Enum.map [1,2,3,4], &(&1 + 1)	[2, 3, 4, 5]
+Enum.map [1,2,3,4], &(&1 * &1)	[1, 4, 9, 16]
+Enum.map [1,2,3,4], &(&1 < 3)	[true, true, false, false]
+
+Enum.map [1,2,3,4], &(&1 + 2)	[3, 4, 5, 6]
+Enum.each [1,2,3,4], &(IO.inspect &1)	1	2	3	4	:ok
+
+def greet(greeting, name), do: (
+	IO.puts greeting
+	IO.puts "Como você está?, #{name}?"
+)
+
+Simplificando funções:
+
+defmodule Times do	#Função tamanho(linhas) grande
+  def double(n) do
+    n * 2
+  end
+end
+
+defmodule Times do	#Função tamanho(linhas) médio
+  def double(n), do: n * 2
+end
+
+defmodule Times, do: (def double(n), do: n * 2)		#Função pequena, não aconselhavel
+
+what_is(x) when is_number(x) - Em guard.exs (arquivo)
+
+Funções especiais do elixir - Em Func_esp.txt (arquivo)
+
+Default parametros - Em default_params.exs (arquivo) # Example.func()
+
+	Example.func("a", "b")			# => ["a",2,3,"b"]
+	Example.func("a", "b", "c")		# => ["a","b",3,"c"]
+	Example.func("a", "b", "c", "d")	# => ["a","b","c","d"]
+
+Default parametros2 - Em default_params2.exs (arquivo) # Params.func()
+
+	IO.puts Params.func(99)			# You passed in 99 and 123
+	IO.puts Params.func(99, "cat")		# You passed in 99 and cat
+	IO.puts Params.func([99])		# You said 123 with a list
+	IO.puts Params.func([99], "dog")	# You said dog with a list
+
+Funções privadas
+
+def fun(a) when is_list(a), do: true
+defp fun(a), do: false
+
+Operador Pipe |>
+
+Operador Pipe evita, os segmentos comuns de parentêses Aluno(numero(media(nota)))
+
+example nota |> media |> numero |> Aluno
+
+(1.. 10) |> Enum.map(&(&1*&1)) |> Enum.filter(&(&1 < 40))	#[1, 4, 9, 16, 25, 36]
+1 à 10, eleve ao quadrado, e mostre apenas que forem menor 40
+
+Módulos
+
+chamar uma função dentro de uma função para outra função usa-se ponto "."
+
+	example - ModuloExe.exs
+	Mod.func1	Mod.func2
+	Outer.outer_func	Outer.Inner.inner_func
+
+?? import, pág 59 - 60, import, Entendi.
+# Importa a macro List, apenas a função flatten, com apenas um argumento sendo passado.
+
+Estudar alias pág 60
+
+Atribuição módulos Metadata
+
+@nome
+
+Example - attributes.exs (arquivo)
+
+[head | tail] = [1, 2, 3]	
+head	#1
+tail	#[2, 3]
+
+arquivo mylist.exs
+MyList.len([])	#Recursividade, retorna tamanho da lista
+
+arquivo mylist1.exs
+#evita o erro de head, não usado. _
+
+arquivo mylist2.exs
+MyList.square [3, 4, 5, 7]	#[9, 16, 25, 49]iex(2)> MyList.sum([1, 2, 3, 4], 0)
+
+#retorna o números elevado ao quadrado.
+
+arquivo mylist3.exs
+# retorna números com acréscimo de 1
+
+arquivo mylist4.exs
+# retorna números com a função escolhida
+  #MyList.map [1, 2, 3, 4], fn (n) -> n/2 end
+  #MyList.map [1,2,3,4], &(&1 + 1)  [2, 3, 4, 5]
+  #MyList.map [1,2,3,4], &(&1 > 2)  [false, false, true, true]
+
+arquivo mylist_sum.exs
+# retorna a soma total dos números digitados
+#MyList.sum([1, 2, 3, 4], 0)
+
+arquivo mylist_sum1.exs
+# retorn a soma total ... não necessita do 0 no final
+#MyList.sum([1, 2, 3, 4])
+
+arquivo reduce.exs
+#MyList.reduce([1,2,3,4,5], 0, &(&1 + &2))  15
+
+pág 73 #Consegui agora eeeeh ahsuhuahu
+
+arquivo swap.exs
+#Swapper.swap [1, 2, 3, 4]
+** (CompileError) testetotal.ex:6: cannot access struct Student, the struct was not yet defined or the struct is being accessed in the same context that defines it
+arquivo weather.exs
+
+#for_location_27(WeatherHistory.test_data)
+# pega todos valores com temperatura igual a 27
+
+
+Modulo de lista
+
+	List.flatten([[[1], 2], [[[3]]]])	# [1, 2, 3]
+
+	List.foldl([1, 2, 3], "", fn value, acc -> "#{value}(#{acc})" end)		# "3(2(1()))"
+warning: code block contains unused literal "Write a function MyList.span(from, to) that returns a list of the numbers from\nfrom up to to .\n" (remove the literal or assign it to _ to avoid warnings)
+	List.foldr([1, 2, 3], "", fn value, acc -> "#{value}(#{acc})" end)		# "1(2(3()))"
+
+	List.replace_at([1, 2, 3], 2, "wesley")	# [1, 2, "wesley"]
+
+	kw = [{:name, "Dave"}, {:likes, "Programming"}, {:where, "Dallas", "TX"}]
+		
+
+	List.keyfind(kw, "Dallas", 1)	# {:where, "Dallas", "TX"}	# número no final é posição da key chamada
+
+List.keydelete	# keydelete(kw, "TX", 2)
+List.keyreplace	# keyreplace(kw, :name, 0, {:first_name, "Dave"})
+
+
+keyword listas
+
+#pág 80, example @defaults, keyword acesso, sem arquivo, ler pdf, entendi melhor depois ler mais um pouco.
+
+Maps
+
+map = %{ name: "Dave", likes: "Programming", where: "Dallas" }	#%{likes: "Programming", name: "Dave", where: "Dallas"}
+Map.keys map	#[:likes, :name, :where]
+Map.values map	#["Programming", "Dave", "Dallas"]
+map[:name]	#"Dave"
+
+
+(...) mais sobre map pág 81, 82, 83
+# troca de palavras, seguidas de key, m: 10 para m1: Dez, final da pág 83
+m = %{ a: 1, b: 2, c: 3 }	# %{a: 1, b: 2, c: 3}
+m1 = %{ m | b: "two", c: "three" }	# %{a: 1, b: "two", c: "three"}
+
+Estruturas
+
+# Estruturas são parecidas com maps %{} pág 84
+# Estudar mais depois, estruturas, são usadas mais (acho) para palavras já reservadas, como nome, idade etc. seu acesso é diferente de map
+
+The Access Module # estudar pág 89 - 90
+
+Sets
+
+set1 = 1..5 |> Enum.into(MapSet.new)	#MapSet<[1, 2, 3, 4, 5]>
+set2 = 3..8 |> Enum.into(MapSet.new)	#MapSet<[3, 4, 5, 6, 7, 8]>
+
+# Enum.into() coloca o termo na frente de uma list, se o termo for um tipo diferente igual MapSet, os valores da list se tornam um MapSet.
+# MapSet = Set
+
+MapSet.member? set1, 3	true
+MapSet.union set1, set2	#MapSet<[1, 2, 3, 4, 5, 6, 7, 8]>
+MapSet.difference set1, set2	#MapSet<[1, 2]>
+MapSet.difference set2, set1	#MapSet<[6, 7, 8]>
+MapSet.intersection set2, set1	#MapSet<[3, 4, 5]>
+
+Enum
+
+list = Enum.to_list 1 .. 5 	#[1, 2, 3, 4, 5]
+Enum.concat([1, 2, 3], [4, 5, 6])	#[1, 2, 3, 4, 5, 6]
+Enum.map(list, &(&1 * 10))	#[10, 20, 30, 40, 50]
+Enum.map(list, &(String.duplicate("*"), &1))	#["*", "**", "***", "****", "*****"]
+Enum.at(10.. 20, 3)	#13	#posição 3
+Enum.at(10 .. 20, 20, :no_one_here) #:no_one_here
+
+Enum.filter(list, &Integer.is_even/1)	#require Integer
+Enum.reject(list, &Integer.is_enven/1)
+Enum.sort [3, 4, 1, 2]		# [1, 2, 3, 4]
+
+Enum.sort ["there", "was", "a", "crooked", "man"], &(String.length(&1) <= String.length(&2))	
+
+Enum.max [1, 2, 4, 3]	#4
+Enum.max_by ["aa", "aaaa", "bbbbbb"], &String.length/1	# "bbbbbb"
+
+Enum.take(list, 3)	#[1, 2, 3]
+Enum.take_every list, 2	#[1, 3, 5]
+
+Enum.split(list, 3)	MyList#{[1, 2, 3], [4, 5]}
+Enum.split_while(list, &(&1 < 4))	#{[1, 2, 3], [4, 5]}
+
+Enum.join(list)		#"12345"
+Enum.join(list, ", ")	# "1, 2, 3, 4, 5"
+
+(...) PDF pág 97, verificar se todos são menores que 4, se algum é menor que 4, se tem um 4.
+
+pág 97 e inicio 98 estudar
+
+Exercicios final pág 98 fazer depois
+
+Stream
+
+s = Stream.map [1, 3, 5, 7]
+Enum.to_list s	#[2, 4, 6, 8]
+
+Revi:
+numbers = Stream.map [1, 2, 3, 4], &(&1 * &1)
+	Para visualizar os números ou obter as resposta
+Enum.to_list numbers
+
+stream = Stream.cycle([1, 2, 3, 4, 5])
+Enum.take(stream, 20)	#[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+cycle de Stream, repete o número que é passado infinitamente, ex: [1, 2], ao tentar pegar 4 números dessa Stream os mesmos serão [1, 2, 1, 2]
+
+######################################################################################
+			    Stream.resource pág 104 estudar 
+######################################################################################
+
+
+Stream.map(1..10_000_000, &(&1+1)) |> Enum.take(5)	[2, 3, 4, 5, 6]
+
+Stream.cycle pág 102	estudar
+Stream.repeatedly	repete o que é passado
+Stream.iterate		repete o número com a função passada
+Stream.unfold pág 103
+Ex: Fibonacci
+	Stream.unfold({0, 1}, fn {f1, f2} -> {f1, {f2, f1+f2}} end ) |> Enum.take(15)
+
+pág 107
+Enum.into 1 .. 10, []	arquvivo Tudo.ex #teste 6
+Enum.into 1 .. 5, [100, 101]	[100, 101, 1 , 2, 3, 4, 5]
+
+Comprehensions
+arquvivo Tudo.ex #teste 7 - 10
+for x <- [1, 2, 3, 4, 5], do: x * x	# [1, 4, 9, 16, 25]
+for x <- [1, 2, 3, 4, 5], x < 4 do: x * x	# [1, 4, 9]
+
+for x <- [1, 2], y <- [5, 6], do: x * y	# [5, 6, 10, 12]
+for x <- [1, 2], y <- [5, 6], do: {x, y}	# [{1, 5}, {1, 6}, {2, 5}, {2, 6}]
+
+######################################################################################
+(...) pág 108
+(...) pág 109
+######################################################################################
+
+Exercicios pág 110 
+
+String and Binaries
+
+name = "dave"	"dave"
+"Hello, #{String.capitalize name}!"	"Hello, Dave!"
+
+(...) pág 115, caracteres especiais ~c, ~n (etc)
+
+
+pág 119 exe 1
+
+Binários
+
+b = << 1, 2, 3 >>
+byte_size b	# 3
+bit_size b	# 24
+
+b = << 1::size(2), 1::size(2), 0::size(1) >>
+
+#1::size(2)	# 01
+#1::size(2)	# 01
+#0::size(1)	# 0
+# 01 01 0	01010	1010 = 10 decimal
+
+<<10::size(5)>>
+
+int = << 1 >>
+float = << 2.5 :: float >>	<<64, 4, 0, 0, 0, 0, 0, 0>>
+mix = << int :: binary, float :: binary >>	<<1, 64, 4, 0, 0, 0, 0, 0, 0>>
+
+###########################################################
+	<< sign (...) NÃO ENTENDI PAG 120
+###########################################################
+
+String.at("Dog", 0)	# D
+String.at("Dog", -1)	# g
+
+Edição de String pag 121 
+
+Control Flow
+
+if 1 == 2, do: "true part", else: "false part"
+
+unless 1 == 1, do: "error", else: "OK"
+
+trunc(number) 		#trunc(4.444) = 4	# Retorna número truncado ou seja inteiro.
+tuple_size(tuple)	#Retorna tamanho da tupla.
+
+apply(Enum, :reverse, [[1, 2, 3]])	# [3, 2, 1]
+Pág 146
+
+Ao chamar uma função que tem macro, exemplo Integer.is_even or is_odd, deve ser chamada a função atráves do require.
+Ex:
+
+Integer.is_even(10)	#erro
+require Integer
+Integer.is_even(10)	#true 10 é par
+
+para ver se a função tem macro, basta digitar no iex o comando module_info
+E:
+Integer.module_info
+
+Cáp 13 e 14	Tentei acompanhar project, porém deu erro de compilação
+
+JO976857393BR
+
+#############################################################################
+# Concurrent Programming		Cápitulo 15			    #
+#############################################################################
+
+receive envia e recebe mensagem multiplo processos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

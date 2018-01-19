@@ -1,0 +1,20 @@
+++/2 
+significa que a operação ++ 
+suporta apenas dois argumentos
+
+[1, 2, 3] ++ [4, 5, 6]
+    1 		 2
+
+Diferença para map %{} e listas de keys
+
+lista necessita de um átomo map não.
+
+[foo: "bar", hello: "world"]
+%{:foo => "bar", "hello" => "world"}
+
+map = %{foo: "bar", hello: "world"}	%{foo: "bar", hello: "world"}
+%{map | foo: "baz"}	%{foo: "baz", hello: "world"}
+
+
+Enum.uniq_by([1, 2, 3, 2, 1, 1, 1, 1, 1], fn x -> x end)
+elimina itens duplicados

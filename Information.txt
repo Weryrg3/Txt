@@ -1,0 +1,80 @@
+Por arquivos:	*PM = Partned Match
+
+arq: 0.Total.ex		Terminal
+arq: 2.List.ex          Tuple, Map, Set, MapSet, Keyword, List.Chars., Set.
+arq: 5.IntegerFloat.ex  Float
+
+arq: ability_modifier.exs	IO.gets, Integer.parse(), case, PM, when
+arq: attributesEd.ex            @author
+arq: book_room.exs		Enum.each
+arq: check_age.exs              cond, PM, Integer.parse IO.gets _________________________
+arq: countdown.exs              receive, after, -Stream.resource, :os.cmd, :erlang.time, :halt
+
+arq: default_params2.exs        \\
+arq: default_params.exs         \\
+arq: Exe1.ex                    IO.gets, Float.parse()
+arq: fact_tr.exs                *recursion -> acc
+arq: fatorial1.exs              *recursion number
+arq: fatorial2.ex               *recusion number, when
+arq: fatorial3.ex               *recursion, number, complex, when, PM
+arq: fatorial4.ex               *recursion, |>, Enum.take(), Enum.reduce()
+arq: funcao.ex                  *fn, PM, ^name
+arq: guardEd.ex                 is_number(), is_list(), is_binary(), is_atom ...
+arq: halloween.ex               *~w(text), |>, Stream.cycle(), Enum.zip()
+arq: higher_order_functions.ex  *complex
+arq: import.ex                  List.flatten, import
+arq: keywords.ex		Keyword.get(), Keyword.merge()
+arq: MycodeAll.ex		[head | tail], Enum.all?, Enum.sort, String.split, Enum.map, PM ...	
+arq: MycodeL0.ex		Float.round()   
+arq: MycodeL1.ex      		PM, when
+arq: MycodeL2.ex      		Enum.count, Enum.split(), when, head2, tail2
+arq: MycodeR10.ex     		[head | tail], List.to_string(), |>, String.length() ...
+arq: MycodeR11.ex     		|>, Enum.map(), String.length(), Enum.max() ...
+arq: MycodeR12.ex     		String.split(), String.downcase(), 
+arq: MycodeR2.ex      		PM, <>
+arq: MycodeR4.ex      		Enum.map(), Enum.each()
+arq: MycodeR6.ex      		for, Enum.map(), Enum.max()
+arq: MycodeR7.ex      		when 
+arq: MycodeR8.ex      		Float.round(), Float.to_string(), System.cwd(), System.get_env() ...
+
+arq: MycodeR9.ex      		[head | tail]
+arq: MycodeRP0.ex     		Enum.all?, falta terminar ##############################
+arq: mylist1.exs      		[head | tail]
+arq: mylist2.exs      		[head | tail]
+arq: mylist3.exs      		[head | tail]
+arq: mylist4.exs      		[head | tail]
+arq: mylistAll.exs    		[head | tail]
+arq: my_list.ex			[head | tail]
+arq: mylist.exs       		[head | tail]
+arq: mylist_sum1.exs		[head | tail]
+arq: mylist_sum.exs		[head | tail]
+arq: my_string.ex		|>, String.split(), Enum.map, String.capitalize, Enum.join
+
+arq: navigator.ex		
+arq: number_compare.ex
+arq: query.exs			for
+arq: number_compare_guard.ex
+arq: recursion.ex
+arq: reduce.exs
+arq: screws_factory.ex
+arq: sorte.ex
+arq: sort.ex
+arq: spawn2.exs
+arq: spawn3.exs
+arq: spawn4.exs
+arq: spawn-basic.ex
+arq: spwan1.exs
+arq: swap.exs
+arq: test3.ex
+arq: teste1.ex
+arq: teste2.ex
+arq: teste.ex
+arq: testetotal.ex
+arq: times2.exs
+arq: times.exs
+arq: tr_fatorial.ex
+arq: Tudo.ex
+arq: weather2.exs
+arq: weather3.exs
+arq: weather.exs		PM
+arq: word_builder.ex                 

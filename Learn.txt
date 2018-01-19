@@ -1,0 +1,47 @@
+
+######################################## Cap 1 ##########################################
+
+### Pense diferentemente
+
+######################################## Cap 2 ##########################################
+
+### Trabalhando com Variáveis e Funções
+
+- Funções anónimas
+	Elixir permite até 255 parametros (fn name -> name end) 255, até name's
+	Porém, o número deve ser abaixo de 5, caso contrário melhor utilização de uma 		variável.
+
+	upcase = &String.upcase/1
+	Quando um argumento tem zero arity (termos (/0)), não podemos atribuir sua 		função &(...) para uma variável. Usar fn nesses casos.
+
+######################################## Cap 3 ##########################################
+
+### Pattern Matching
+
+######################################## Cap 4 ##########################################
+
+### Recursão
+
+	navigator.ex pag 74 - 78 ________________________________________________________
+	pag 81 dois ultimos exerc _______________________________________________________
+
+######################################## Cap 5 ##########################################
+
+### Usando funções de ordem superior
+
+100 * (1 + 50/100)	100 * (1 + 0.50)
+100 * 1.50
+
+	update_in
+	increase_price = fn i -> %{title: i.title, price: i.price * 1.1} end
+	Passar por um list -> map alterando apenas o valor de uma keyword.
+	increase_price = fn item -> update_in(item.price, &(&1 * 1.1)) end,
+
+	
+	
+
+
+
+
+
+

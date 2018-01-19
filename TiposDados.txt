@@ -1,0 +1,106 @@
+Integer.	# Terminado.	->	5.IntegerFloat.ex &
+Float.		# Terminado.	->	5.IntegerFloat.ex & 
+Atom.		# Terminado.	->	5.IntegerFloat.ex &
+____________________________________________________________
+
+Total		# Terminal fazendo (...) -> 0.Total.ex
+Kernel		# fazendo (...)	->	0.Total.ex
+Kernel.ParallelCompiler.	->	0.Total.ex
+Kernel.ParallelRequire.		->	0.Total.ex
+Kernel.SpecialForms		->	0.Total.ex
+Enum.		# fazendo (...)	->	1.Enum.ex
+List.		# fazendo (...)	->	2.List.ex
+List.Chars.			->	2.List.ex
+Tuple.		# fazendo (...) ->	2.List.ex
+Map.		# fazendo (...) ->	2.List.ex
+Set.		# fazendo (...) ->	2.List.ex
+MapSet.		# fazendo (...) ->	2.List.ex
+Keyword.	# fazendo (...) ->	2.List.ex
+Stream.		# fazendo (...)	->	3.Stream.ex
+String.		# fazendo (...)	->	4.String.ex
+String.Chars.			->	4.String.ex
+StringIO.			->	4.String.ex
+
+Acess /?
+Agent.
+Application.
+Base.
+Behaviour.
+Bitwise.
+Calendar.
+Calendar.ISO.
+Code.
+Collectable.
+Date.
+Date.Range
+DateTime.
+Dict.
+Enumerable.
+Exception.
+File.		-> File.open("file.txt", [:write], &(IO.write(&1, "Hello World!")))
+File.Stat.
+File.Stream
+GenEvent.Stream.
+GenServer.
+HashDict.
+HashSet.
+IO.
+IO.ANSI.
+IO.Stream
+Inspect.
+Inspect.Algebra.
+Inspect.Opts
+Macro.
+Macro.Env.
+Module.
+NaiveDateTime.
+Node.
+OptionParser.
+Path.
+Port.
+Process.
+Protocol.
+Range.
+Record.
+Regex.
+Registry.
+Supervisor.
+Supervisor.Spec.
+System.
+Task.
+Task.Supervisor.
+Time.
+
+URI.
+Version.
+Version.Requirement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

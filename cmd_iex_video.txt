@@ -1,0 +1,220 @@
+Elixir - Programação funcional - Vídeo - Raphael Vidal
+
+Atom - Constante - valor da variável é o próprio nome.
+	:nome
+	:idade
+	true === :true
+
+String
+	"String" diferente de 'String' 
+	Usar aspas duplas para string
+
+Função anónima
+	
+	teste = fn nome ->
+		"Olá, #{nome}"
+	end
+
+	IO.puts teste.("Wesley")
+
+Listas
+
+	[1, :nome, 3.1, 4, fn -> "algo" end, []] lista encadeada
+	lista = [1, 2, 3, 4]
+	Enum.at(lista, 0)	# 1 #Enum percorre a lista.
+
+Tupla
+	{1, 2, 3}, {1, 1.2, "wesley", :nome)
+	[{1, 2, 3}, {4, 5, 6}]
+	elem(tupla, 0)	#1	#Acessar item da tupla
+
+File.read("teste.exs")	#ou teste.ex
+
+[1, 2, 3, 2] -- [1, 2]	   #[3, 2] remove só os primeiros números
+[1, 2, 3, 2] -- [1, 2, 2]  #[3]
+
+Concatenação de strings
+	<>
+	"Olá, " <> "Wesley"
+
+&& || !		# usar para outros valores
+and or not	# usar quando Esperamos boleans
+
+nome = "Wesley" #Não é uma atribuição e sim uma asserção
+
+lista = [head | tail]	#cabeça e rabo
+
+{resultado, _conteudo} = {:ok, 5}	#verifica só primeiro termo
+
+if else unless	#unless (if invertido)
+
+case nome do
+  "Fulano" ->
+  IO.puts "É Fulano"
+end
+
+case File.read("teste.exs") do
+  {:ok, conteudo} ->
+    IO.puts conteudo
+  {:error, erro} ->	# or {:error, :enoent} ##Erro especifico 
+    IO. puts "Ocorreu o erro #{erro}"
+end
+
+Guard
+
+case 5 do
+  num when num < 10 ->
+    IO.puts "Menor que dez"
+  _num ->
+    IO.puts "Maior que dez"
+end
+
+nome = "Wesley"
+cond do 
+  2 + 2 == 5 ->
+    IO.puts "Não vai printar"
+  nome == "Wesley" ->
+    IO.puts "Vai chegar aqui"
+  :otherwise ->
+    IO.puts "Não caiu em nada"
+end
+
+'hello' #lista char simples
+
+String.codepoints("Hello")	#Retorna caracteres separados
+
+nome = "Fulano da silva"
+"Fulano" <> restante = nome	#restante = "da silva"
+
+char list
+
+to_string :atom
+to_string 1
+to_string 'atom'
+
+Keyword list	#chaves: atoms (:nome), não string 
+[{:nome, "Raphael"}, {:empresa, "CBK Software"}]
+[nome: "Raphael", empresa: "CBK Software"]
+
+dados = [nome: "Raphael", empresa: "CBK Software"]
+dados [:nome]	#"Raphael"
+
+if dados[:nome] == "Raphael
+
+Map
+
+	dados = %{"nome" => "Raphael", "empresa" => "CBK"}
+	IO.puts dados["nome"]
+	
+	empresa = "CBK"
+	dados = %{nome: "Raphael", empresa: empresa}
+	
+	dados = %{nome: "Raphael", empresa: "CBK")
+	dados = %{dados | nome: "Fulano"}	#Mudar nomes das asserções das keys, as keys não mudam
+
+	Dict.put(dados, :email, "fulano@gmail.com.br")	#Adicionar ao map
+
+	Keywords.put, Map.put	#Especificos 
+
+defmodule Pessoa do
+  def cumprimentar(pessoa) do
+    IO.puts "Olá, #{pessoa[:nome]}"
+  end
+end
+
+defmodule Pessoa do
+  def cumprimentar(%{nome: nome}) do
+    IO.puts "Olá, #{nome}"
+  end
+end
+
+Pessoa.cumprimentar{%{nome: "Siclano"})
+elixirc pessoa.ex
+
+defmodule Pessoa do
+  def bebidas_alcolicas(%{idade: idade}) when idade > 17 do #evita if
+    :ok
+  end
+  def bebidas_alcolicas(%{idade: _idade}) do
+    :error
+  end
+end
+
+defmodule Pessoa do
+  def bebidas_alcolicas(%{idade: idade}) when idade > 17, do: :ok
+  def bebidas_alcolicas(%{idade: _idade}), do: :error
+end
+
+chamda de função string
+Pessoa.cumprimentar() #quando vázio chamar outro nome
+
+defmodule Pessoa do
+  def cumprimentar() do
+    cumprimentar("Fulano")
+  end
+  def cumprimentar(nome) do
+    IO.puts "Olá, #{nome}"
+  end
+end
+
+#Função mais simples, com modulo
+
+defmodule Pessoa do
+  def cumprimentar(nome \\ "Fulano") do
+    IO.puts "Olá, #{nome}"
+  end
+end
+
+#defp função privada, só pode ser chamada dentro do modulo
+
+anonima = fn nome ->
+  Pessoa.cumprimentar(nome)
+end
+
+anonima.("Fulano")
+
+anonima = &Pessoa.cumprimentar/1 # 1 argumento
+anonima.("Fulano")
+
+defmodule Pessoa do
+  @pessoa_padrao "Fulano"	#Valor de escape
+  def cumprimentar(nome \\ @pessoa_padrao) do
+    IO.puts "Olá, #{nome}"
+  end
+end
+
+@doc """ """ 	#comentar
+@moduledoc """ """ #comentar ou documentar modulo
+
+defmodule Listas do
+  def contar(lista) do
+    if Enum.empty?(lista) do
+      0
+    else
+      [_primeiro | resto] = lista
+      1 + contar(resto)
+  end
+end
+
+IO.puts Listas.contar([1, 2, 3])
+
+defmodule Listas do
+  def contar([]), do: 0
+  def contar([_primeiro | resto]) do
+    1 + contar(resto)
+    end
+end
+
+#lista otimizada
+
+defmodule Listas do
+  def cont(lista) do
+    contar(lista, 0)
+  end
+  def contar([], quantidade), do: quantidade
+  def contar([_p | resto], quantidade) do
+    contar(resto, quantidade + 1)
+  end
+end
+
+
