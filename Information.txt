@@ -50,31 +50,25 @@ arq: mylist_sum1.exs		[head | tail]
 arq: mylist_sum.exs		[head | tail]
 arq: my_string.ex		|>, String.split(), Enum.map, String.capitalize, Enum.join
 
-arq: navigator.ex		
-arq: number_compare.ex
+arq: navigator.ex		Path.expand(), File.dir?(), File.ls!, 
 arq: query.exs			for
-arq: number_compare_guard.ex
-arq: recursion.ex
-arq: reduce.exs
-arq: screws_factory.ex
-arq: sorte.ex
-arq: sort.ex
-arq: spawn2.exs
-arq: spawn3.exs
-arq: spawn4.exs
-arq: spawn-basic.ex
-arq: spwan1.exs
-arq: swap.exs
-arq: test3.ex
-arq: teste1.ex
-arq: teste2.ex
-arq: teste.ex
-arq: testetotal.ex
-arq: times2.exs
-arq: times.exs
-arq: tr_fatorial.ex
-arq: Tudo.ex
-arq: weather2.exs
-arq: weather3.exs
+arq: number_compare_guard.ex	when
+arq: recursion.ex		*my_recusion
+arq: screws_factory.ex		Stream.chunk(), Stream.flat_map(), Enum.each(), Process.sleep()
+
+arq: sort.ex			Enum.count(), Enum.split(), when
+arq: spawn2.exs			receive do
+arq: spawn3.exs			receive do
+arq: spawn4.exs			receive do
+arq: spwan1.exs			receive do
+arq: swap.exs			raise
+arq: teste1.ex			*RECURSÃO
+arq: teste2.ex			*RECURSÃO
+arq: testetotal.ex		Enum.map(), Enum.with_index(), Stream.map(), Stream.filter(), fn, Enum.to_list
+
+arq: tr_fatorial.ex		recursion, when
+arq: Tudo.ex			recursion, Enum.map(), Enum.join(), Enum.into(), String.upcase()
+arq: weather2.exs		recursion
+arq: weather3.exs		recursion
 arq: weather.exs		PM
-arq: word_builder.ex                 
+arq: word_builder.ex            Enum.map(), String.at(), Enum.join()
