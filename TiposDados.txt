@@ -20,6 +20,12 @@ Stream.		# fazendo (...)	->	3.Stream.ex
 String.		# fazendo (...)	->	4.String.ex
 String.Chars.			->	4.String.ex
 StringIO.			->	4.String.ex
+IO.		# fazendo (...)	->	6.InspectIO.ex
+IO.ANSI.	# fazendo (...)	->	6.InspectIO.ex
+IO.Stream	# fazendo (...)	->	6.InspectIO.ex
+Inspect.	# fazendo (...)	->	6.InspectIO.ex
+Inspect.Algebra.		->	6.InspectIO.ex
+Inspect.Opts	# fazendo (...)	->	6.InspectIO.ex
 
 Acess /?
 Agent.
@@ -44,12 +50,6 @@ GenEvent.Stream.
 GenServer.
 HashDict.
 HashSet.
-IO.
-IO.ANSI.
-IO.Stream
-Inspect.
-Inspect.Algebra.
-Inspect.Opts
 Macro.
 Macro.Env.
 Module.
@@ -70,7 +70,6 @@ System.
 Task.
 Task.Supervisor.
 Time.
-
 URI.
 Version.
 Version.Requirement.
@@ -78,6 +77,88 @@ Version.Requirement.
 
 
 
+Kernel
+Kernel.SpecialForms
+
+BASIC TYPES
+
+	Atom
+	Base
+	Bitwise
+	Calendar
+	Calendar.ISO
+	Date
+	DateTime
+	Exception
+	Float
+	Integer
+	NaiveDateTime
+	Record
+	Regex
+	String
+	Time
+	Tuple
+	URI
+	Version
+
+COLLECTIONS & ENUMERABLES
+	Access
+	Date.Range
+	Enum
+	Keyword	
+	List
+	Map
+	MapSet
+	Range
+	Stream
+
+IO & SYSTEM
+	File
+	File.Stat
+	File.Stream
+	IO
+	IO.ANSI
+	IO.Stream
+	OptionParser
+	Path
+	Port
+	StringIO
+	System
+
+MODULES & CODE
+	Code
+	Kernel.ParallelCompiler
+	Macro
+	Macro.Env
+	Module
+
+PROCESSES & APPLICATIONS
+	Agent
+	Application
+	DynamicSupervisor
+	GenServer
+	Node
+	Process
+	Registry
+	Supervisor
+	Task
+	Task.Supervisor
+
+PROTOCOLS
+	Collectable
+	Enumerable
+	Inspect
+	Inspect.Algebra
+	Inspect.Opts
+	List.Chars
+	Protocol
+	String.Chars
+
+DEPRECATED
+	Behaviour
+	Dict
+	GenEvent
+	HashDict
 
 
 
