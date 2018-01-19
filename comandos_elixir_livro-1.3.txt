@@ -1,155 +1,160 @@
-# teste.exs
-IO.puts "Hello, World"
+### OK ### = Entendi
+E+ = Estudar mais
+Nte!! = Não entendi
 
-elixir teste.exs	executar pelo terminal (n/compiler)
-iex> c "teste.exs"	executar pelo terminal (compiler)
+# teste.exs				### OK ###
+IO.puts "Hello, World"			### OK ###
 
-a = 1	operador matemático	# Parttern match 
-1 = a	
-2 = a	Erro 2 não é igual a 1
+elixir teste.exs	executar pelo terminal (n/compiler)	### OK ###
+iex> c "teste.exs"	executar pelo terminal (compiler)	### OK ###
 
-list = [1, 2, 3]	lista 
-[a, b, c] = list	atribui as variaveis ou operador matematico
-# a = 1, b = 2, c = 3
+a = 1	operador matemático	# Parttern match 		### OK ###
+1 = a								### OK ###
+2 = a	Erro 2 não é igual a 1					### OK ###
 
-list = [1, 2, [3, 4, 5 ] ]
+list = [1, 2, 3]	lista 					### OK ###
+[a, b, c] = list	atribui as variaveis ou operador matematico	### OK ###
+# a = 1, b = 2, c = 3						### OK ###
+
+list = [1, 2, [3, 4, 5 ] ]					### OK ###
 # c = [3, 4, 5]
 
-[a] = [ [ 1, 2, 3 ] ]
-[[a]] = [[[1, 2, 3] ] ]
+[a] = [ [ 1, 2, 3 ] ]						### OK ###
+[[a]] = [[[1, 2, 3] ] ]						### OK ###
 
-[1, _. _] = [1, 2, 3]	Underline(underscore) serve para valores que não serão ou não estão sendo usados
+[1, _. _] = [1, 2, 3]	Underline(underscore) serve para valores que não serão ou não estão sendo usados na verificação				### OK ###
 
-[a, a] = [1, 1]
-[b, b] = [1, 2]	#erro
+[a, a] = [1, 1]							### OK ###
+[b, b] = [1, 2]	#erro						### OK ###
 
-a = 1 
-^a = 1	Verifica se a variavel é 1 (true)
-^a = 2	Erro
-^a = 2 - a	(true)
+a = 1 								### OK ###
+^a = 1	Verifica se a variavel é 1 (true)			### OK ###
+^a = 2	Erro							### OK ###
+^a = 2 - a	(true)						### OK ###
 
-list1 = [2, 3, 4]	listas são imutaveis
-list2 = [1 | list1]	# [1, 2, 3, 4]
+list1 = [2, 3, 4]	listas são imutaveis			### OK ###
+list2 = [1 | list1]	# [1, 2, 3, 4]				### OK ###
 
-name = "elixir"
-cap_name = String.capitalize name	#"Elixir"
+name = "elixir"							### OK ###
+cap_name = String.capitalize name	#"Elixir"		### OK ###
 name	#"elixir"
 
-Regex.run ~r{[aeiou]}, "caterpillar"	#["a"]
+Regex.run ~r{[aeiou]}, "caterpillar"	#["a"] ________________ E+ ______________________
 
-Regex.scan ~r{[aeiou]}, "caterpillar"	#[["a"], ["e"], ["i"], ["a"]]
+Regex.scan ~r{[aeiou]}, "caterpillar"	#[["a"], ["e"], ["i"], ["a"]] _______ E+_________
 
-Regex.split ~r{[aeiou]}, "caterpillar"	#["c", "t", "rp", "ll", "r"]
+Regex.split ~r{[aeiou]}, "caterpillar"	#["c", "t", "rp", "ll", "r"] ________ E+_________
 
-Regex.replace ~r{[aeiou]}, "caterpillar", "*"	#"c*t*rp*ll*r"
+Regex.replace ~r{[aeiou]}, "caterpillar", "*"	#"c*t*rp*ll*r" ______________ E+_________
 
-{status, count, action} = {:ok, 42, "next"}	#Tuplas #:ok - type(atom)
+{status, count, action} = {:ok, 42, "next"}	#Tuplas #:ok - type(atom) ### OK ###
 
-[ 1, 2, 3 ] ++ [ 4, 5, 6 ]	#[1, 2, 3, 4, 5, 6]
-[1, 2, 3, 4] -- [2, 4]		#[1, 3]
-1 in [1,2,3,4]			#true
-"wombat" in [1, 2, 3, 4]	#false
+[ 1, 2, 3 ] ++ [ 4, 5, 6 ]	#[1, 2, 3, 4, 5, 6]		### OK ###
+[1, 2, 3, 4] -- [2, 4]		#[1, 3]				### OK ###
+1 in [1,2,3,4]			#true				### OK ###
+"wombat" in [1, 2, 3, 4]	#false				### OK ###
 
 Maps 
 
-states = %{ "AL" => "Alabama", "WI" => "Wisconsin" }	#%{"AL" => "Alabama", "WI" => "Wisconsin"}
+states = %{ "AL" => "Alabama", "WI" => "Wisconsin" }	#%{"AL" => "Alabama", "WI" => "Wisconsin"}							### OK ###
 
 %{ "one" => 1, :two => 2, {1,1,1} => 3 }	#%{:two => 2, {1, 1, 1} => 3, "one" => 1}
 
-name = "José Valim"	#"José Valim"
-%{ String.downcase(name) => name }	#%{"josé valim" => "José Valim"}
+name = "José Valim"	#"José Valim"				### OK ###
+%{ String.downcase(name) => name }	#%{"josé valim" => "José Valim"} ### OK ###
 
-states = %{ "AL" => "Alabama", "WI" => "Wisconsin" }	#%{"AL" => "Alabama", "WI" => "Wisconsin"}
-states["AL"]	#"Alabama"	#Acessando um item do mapa @@(tuples?, dic?)
+states = %{ "AL" => "Alabama", "WI" => "Wisconsin" }	#%{"AL" => "Alabama", "WI" => "Wisconsin"}							### OK ###
+
+states["AL"]	#"Alabama"	#Acessando um item do mapa @@(tuples?, dic?) ### OK ###
 
 Binários
 
-bin = <<3 :: size(2), 5 :: size(4), 1 :: size(2)>>	#<<213>>
-:io.format("~-8.2b~n", :binary.bin_to_list(bin))	#11 0101 01	:ok
-byte_size bin	#1
+bin = <<3 :: size(2), 5 :: size(4), 1 :: size(2)>>	#<<213>>	### OK ###
+:io.format("~-8.2b~n", :binary.bin_to_list(bin))	#11 0101 01	### OK ###
+byte_size bin	#1							### OK ###
 
 Operadores
 
-1 === 1.0	#false	#operador rígido
-1 !== 1.0	#true	#operador rígido
-1 == 1.0	#true
-1 != 1.0	#false
-1 > 1.0		#false
-1 >= 1.0	#true
-1 < 1.0		#false
-1 <= 1.0	#true
+1 === 1.0	#false	#operador rígido				### OK ###
+1 !== 1.0	#true	#operador rígido				### OK ###
+1 == 1.0	#true							### OK ###
+1 != 1.0	#false							### OK ###
+1 > 1.0		#false							### OK ###
+1 >= 1.0	#true							### OK ###
+1 < 1.0		#false							### OK ###
+1 <= 1.0	#true							### OK ###
 
-1 || 1.0	#true	# Ou (or)	# verifica primeiro a esquerda se for verdadeiro retorna o valor da esquerda, caso contrário, retorna o valor da direita.
+1 || 1.0	#true	# Ou (or)	# verifica primeiro a esquerda se for verdadeiro retorna o valor da esquerda, caso contrário, retorna o valor da direita. ### OK ###	
 
-1 && 1.0	#true	# E (and)	# verifica o segundo valor se for verdadeiro retorna o valor da direita, caso contrário, retorna o valor da esquerda.
+1 && 1.0	#true	# E (and)	# verifica o segundo valor se for verdadeiro retorna o valor da direita, caso contrário, retorna o valor da esquerda. ### OK ###
 
-!1		#false	#(!a) (not)
+!1		#false	#(!a) (not)					### OK ###
 
-+ - * / div rem
++ - * / div rem								### OK ###
 
-4 / 2		# 2.0
-div(4, 2)	# 2	#divisão inteira
-rem(7, 2)	# 1	#resto da divisão
+4 / 2		# 2.0							### OK ###
+div(4, 2)	# 2	#divisão inteira				### OK ###
+rem(7, 2)	# 1	#resto da divisão				### OK ###
 
-list1 ++ list2		# concatena duas lista
-list1 -- list2		# concatena duas listas (remove)
+list1 ++ list2		# concatena duas lista				### OK ###
+list1 -- list2		# concatena duas listas (remove)		### OK ###
 	exempl:
-	list1 = [1, 2, 3, 4]
-	list2 = [4, 5, 6]
-	list1 ++ list2	# [1, 2, 3, 4, 4, 5, 6]
-	list1 -- list2	# [1, 2, 3]
+	list1 = [1, 2, 3, 4]						### OK ###
+	list2 = [4, 5, 6]						### OK ###
+	list1 ++ list2	# [1, 2, 3, 4, 4, 5, 6]				### OK ###
+	list1 -- list2	# [1, 2, 3]					### OK ###
 
-binary1 <> binary2	# concatena dois binários ou strings, verificar melhorar está operação
+binary1 <> binary2	# concatena dois binários ou strings, verificar melhorar está operação								### OK ###
 
 With
 
-with [a|_] <- [1,2,3], do: a	#1
+with [a|_] <- [1,2,3], do: a	#1__________________________________________ E+__________
 
-mean = with count = Enum.count(values),
-           sum = Enum.sum(values)
+mean = with count = Enum.count(values), ____________________________________ E+__________
+           sum = Enum.sum(values) 
 	do
 	  sum/count
 	end
 
-mean = with(
+mean = with( _______________________________________________________________ E+__________
 	count = Enum.count(values),
 	sum = Enum.sum(values)
 	do
 		sum/count
 	end)
 
-mean = with count = Enum.count(values),
+mean = with count = Enum.count(values), ____________________________________ E+__________
 	sum = Enuhead m.sum(values),
 	do: sum/count
 
 Funções
 
-fn
+fn									### OK ###
 end
 
-sum = fn(a, b) -> a + b end
-sum.(4, 6)	#10
+sum = fn(a, b) -> a + b end						### OK ###
+sum.(4, 6)	#10							### OK ###
 
-greet = fn -> IO.puts "Hello, World" end
-greet.()	# Hello, World	:0k
+greet = fn -> IO.puts "Hello, World" end				### OK ###
+greet.()	# Hello, World	:0k					### OK ###
 
-#{a, b} = {1, 2}
+#{a, b} = {1, 2}							### OK ###
 
-swap = fn { a, b } -> {b, a} end 
-swap.({8, 1})	#{1, 8}
+swap = fn { a, b } -> {b, a} end 					### OK ###
+swap.({8, 1})	#{1, 8}							### OK ###
 
-soma = fn(a, b, c) -> a + b + c end
-soma.(1, 2, 3)	#6
+soma = fn(a, b, c) -> a + b + c end					### OK ###
+soma.(1, 2, 3)	#6							### OK ###
 
-list_concat = fn([a, b], [c, d]) -> [a, b] ++ [c, d] end
-list_concat.([:a, :b], [:c, :d]) # [:a, :b, :c, :d]
+list_concat = fn([a, b], [c, d]) -> [a, b] ++ [c, d] end		### OK ###
+list_concat.([:a, :b], [:c, :d]) # [:a, :b, :c, :d]			### OK ###
 
-tuplist = fn({a, b}) -> [a, b] end
-tuplist.({ 1234, 5678})           #[1234, 5678]
+tuplist = fn({a, b}) -> [a, b] end					### OK ###
+tuplist.({ 1234, 5678})           #[1234, 5678]				### OK ###
 
-handle_open = fn
-    {:ok, file} -> "Read data: #{IO.read(file, :line)}"
-    {_,error} -> "Error: #{:file.format_error(error)}"
+handle_open = fn							### OK ###
+    {:ok, file} -> "Read data: #{IO.read(file, :line)}"			### OK ###
+    {_,error} -> "Error: #{:file.format_error(error)}"			### OK ###
 end
 
 handle_open.(File.open("teste.exs"))	#"Read data: IO.puts \"Hello, World\"\n"
