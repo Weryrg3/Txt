@@ -11,6 +11,7 @@ arq: check_age.exs              cond, PM, Integer.parse IO.gets ________________
 arq: countdown.exs              receive, after, -Stream.resource, :os.cmd, :erlang.time, :halt
 
 arq: default_params2.exs        \\
+arq: defstruct.ex		%Map
 arq: default_params.exs         \\
 arq: Exe1.ex                    IO.gets, Float.parse()
 arq: fact_tr.exs                *recursion -> acc
@@ -50,7 +51,8 @@ arq: mylist_sum1.exs		[head | tail]
 arq: mylist_sum.exs		[head | tail]
 arq: my_string.ex		|>, String.split(), Enum.map, String.capitalize, Enum.join
 
-arq: navigator.ex		Path.expand(), File.dir?(), File.ls!, 
+arq: navigator.ex		Path.expand(), File.dir?(), File.ls!
+arq: nested.ex			%Map 
 arq: query.exs			for
 arq: number_compare_guard.ex	when
 arq: recursion.ex		*my_recusion
