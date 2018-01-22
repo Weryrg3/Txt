@@ -26,6 +26,9 @@ IO.Stream	# fazendo (...)	->	6.InspectIO.ex
 Inspect.	# fazendo (...)	->	6.InspectIO.ex
 Inspect.Algebra.		->	6.InspectIO.ex
 Inspect.Opts	# fazendo (...)	->	6.InspectIO.ex
+File.		# fazendo (...)	->	7.File.ex
+File.Stat.	# fazendo (...)	->	7.File.ex
+File.Stream	# fazendo (...)	->	7.File.ex
 
 Acess /?
 Agent.
@@ -43,9 +46,6 @@ DateTime.
 Dict.
 Enumerable.
 Exception.
-File.		-> File.open("file.txt", [:write], &(IO.write(&1, "Hello World!")))
-File.Stat.
-File.Stream
 GenEvent.Stream.
 GenServer.
 HashDict.
