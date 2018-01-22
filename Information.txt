@@ -29,16 +29,6 @@ arq: MycodeAll.ex		[head | tail], Enum.all?, Enum.sort, String.split, Enum.map, 
 arq: MycodeL0.ex		Float.round()   
 arq: MycodeL1.ex      		PM, when
 arq: MycodeL2.ex      		Enum.count, Enum.split(), when, head2, tail2
-arq: MycodeR10.ex     		[head | tail], List.to_string(), |>, String.length() ...
-arq: MycodeR11.ex     		|>, Enum.map(), String.length(), Enum.max() ...
-arq: MycodeR12.ex     		String.split(), String.downcase(), 
-arq: MycodeR2.ex      		PM, <>
-arq: MycodeR4.ex      		Enum.map(), Enum.each()
-arq: MycodeR6.ex      		for, Enum.map(), Enum.max()
-arq: MycodeR7.ex      		when 
-arq: MycodeR8.ex      		Float.round(), Float.to_string(), System.cwd(), System.get_env() ...
-
-arq: MycodeR9.ex      		[head | tail]
 arq: MycodeRP0.ex     		Enum.all?, falta terminar ##############################
 arq: mylist1.exs      		[head | tail]
 arq: mylist2.exs      		[head | tail]
@@ -74,3 +64,10 @@ arq: weather2.exs		recursion
 arq: weather3.exs		recursion
 arq: weather.exs		PM
 arq: word_builder.ex            Enum.map(), String.at(), Enum.join()
+#####################################################################################
+Fora de ordem alfabetica
+E.PatternMatching-1-3.ex	
+E.Functions-1-5			
+E.ModulesAndFunctions-1-7.i	
+E.ListsAndRecursion-0-8.i	
+E.StringsAndBinaries-1-7.i

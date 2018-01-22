@@ -1,6 +1,6 @@
-Integer.	# Terminado.	->	5.IntegerFloat.ex &
-Float.		# Terminado.	->	5.IntegerFloat.ex & 
-Atom.		# Terminado.	->	5.IntegerFloat.ex &
+Integer.	# Terminado.	->	5.IntegerFloat.ex &	BASIC TYPES
+Float.		# Terminado.	->	5.IntegerFloat.ex & 	BASIC TYPES
+Atom.		# Terminado.	->	5.IntegerFloat.ex &	BASIC TYPES
 ____________________________________________________________
 
 Total		# Terminal fazendo (...) -> 0.Total.ex
@@ -81,7 +81,6 @@ Kernel
 Kernel.SpecialForms
 
 BASIC TYPES
-
 	Atom
 	Base
 	Bitwise
