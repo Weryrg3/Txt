@@ -9,6 +9,7 @@ Kernel.ParallelCompiler.	->	0.Total.ex
 Kernel.ParallelRequire.		->	0.Total.ex
 Kernel.SpecialForms		->	0.Total.ex
 Enum.		# fazendo (...)	->	1.Enum.ex
+Enumerable.	# fazendo (...)	->	1.Enum.ex
 List.		# fazendo (...)	->	2.List.ex
 List.Chars.			->	2.List.ex
 Tuple.		# fazendo (...) ->	2.List.ex
@@ -30,6 +31,7 @@ File.		# fazendo (...)	->	7.File.ex
 File.Stat.	# fazendo (...)	->	7.File.ex
 File.Stream	# fazendo (...)	->	7.File.ex
 
+
 Acess /?
 Agent.
 Application.
@@ -44,7 +46,6 @@ Date.
 Date.Range
 DateTime.
 Dict.
-Enumerable.
 Exception.
 GenEvent.Stream.
 GenServer.
