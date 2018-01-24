@@ -1,7 +1,7 @@
 E.PatternMatching-1-3.ex	Pág 16, 17, 18.		Livro 1.3
 E.Functions-1-5			Pág 39, 41, 43, 46	Livro 1.3
 E.ModulesAndFunctions-1-7.i	Pág 49, 51, 56, 63	Livro 1.3	Incompleto
-E.ListsAndRecursion-0-8.i	Pág 72, 73, 76, 98, 110			Incompleto
+E.ListsAndRecursion-0-8		Pág 72, 73, 76, 98, 110
 E.StringsAndBinaries-1-7.i	Pág 119, 126, 127	Livro 1.3	Incompleto
 
 
