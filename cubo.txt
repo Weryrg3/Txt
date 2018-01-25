@@ -1,0 +1,19 @@
+R	->	Lado direito no sentido horário
+R'	->	Lado direito no sentido anti-horário
+R2	->	Lado direito com giro duplo sentido horário
+L	->	Lado esquerdo no sentido horário
+L'	->	Lado esquerdo no sentido anti-horário
+L2	->	Lado esquerdo com giro duplo sentido horário
+U	-> 	Lado de cima no sentido horário
+U'	->	Lado de cima no sentido anti-horário
+U2	->	Lado de cima com giro duplo sentido horário
+D	-> 	Lado de baixo no sentido horário
+D'	-> 	Lado de baixo no sentido anti-horário
+D2	-> 	Lado de baixo com giro duplo
+F	-> 	Lado da frente no sentido horário
+F'	->	Lado da frente no sentido anti-horário
+F2	-> 	Lado da frente com giro duplo
+B	-> 	Lado de trás no sentido horário
+B'	-> 	Lado de trás no sentido anti-horário
+B2	-> 	Lado de trás com giro duplo
+
