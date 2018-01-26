@@ -1,18 +1,24 @@
 Por arquivos:	*PM = Partned Match
 
+arq: 00.Making.ex	--------------------------------------------------
 arq: 0.Total.ex		Terminal
+arq: 1.Enum.ex		--------------------------------------------------
 arq: 2.List.ex          Tuple, Map, Set, MapSet, Keyword, List.Chars., Set.
+arq: 3.List.ex		--------------------------------------------------
+arq: 4.String.ex	--------------------------------------------------
 arq: 5.IntegerFloat.ex  Float
-
+arq: 6.InspectIO.ex	--------------------------------------------------
+arq: 7.File.ex		--------------------------------------------------
 arq: ability_modifier.exs	IO.gets, Integer.parse(), case, PM, when
 arq: attributesEd.ex            @author
 arq: book_room.exs		Enum.each
 arq: check_age.exs              cond, PM, Integer.parse IO.gets _________________________
+arq: checkout.ex		--------------------------------------------------
 arq: countdown.exs              receive, after, -Stream.resource, :os.cmd, :erlang.time, :halt
 
+arq: default_params.exs        	\\
 arq: default_params2.exs        \\
 arq: defstruct.ex		%Map
-arq: default_params.exs         \\
 arq: Exe1.ex                    IO.gets, Float.parse()
 arq: fact_tr.exs                *recursion -> acc
 arq: fatorial1.exs              *recursion number
