@@ -17,6 +17,7 @@ Map.		# fazendo (...) ->	2.List.ex
 Set.		# fazendo (...) ->	2.List.ex
 MapSet.		# fazendo (...) ->	2.List.ex
 Keyword.	# fazendo (...) ->	2.List.ex
+Dict.		# fazendo (...)	->	2.List.ex
 Stream.		# fazendo (...)	->	3.Stream.ex
 String.		# fazendo (...)	->	4.String.ex
 String.Chars.			->	4.String.ex
@@ -31,7 +32,6 @@ File.		# fazendo (...)	->	7.File.ex
 File.Stat.	# fazendo (...)	->	7.File.ex
 File.Stream	# fazendo (...)	->	7.File.ex
 
-
 Acess /?
 Agent.
 Application.
@@ -45,7 +45,6 @@ Collectable.
 Date.
 Date.Range
 DateTime.
-Dict.
 Exception.
 GenEvent.Stream.
 GenServer.

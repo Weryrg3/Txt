@@ -37,9 +37,9 @@
 	Passar por um list -> map alterando apenas o valor de uma keyword.
 	increase_price = fn item -> update_in(item.price, &(&1 * 1.1)) end,
 
-	
-	
+######################################## Cap 6 ##########################################
 
+## Project
 
 
 
