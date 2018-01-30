@@ -8,8 +8,10 @@ Kernel		# fazendo (...)	->	0.Total.ex
 Kernel.ParallelCompiler.	->	0.Total.ex
 Kernel.ParallelRequire.		->	0.Total.ex
 Kernel.SpecialForms		->	0.Total.ex
+--------------------------------------------------
 Enum.		# fazendo (...)	->	1.Enum.ex
 Enumerable.	# fazendo (...)	->	1.Enum.ex
+--------------------------------------------------
 List.		# fazendo (...)	->	2.List.ex
 List.Chars.			->	2.List.ex
 Tuple.		# fazendo (...) ->	2.List.ex
@@ -18,37 +20,43 @@ Set.		# fazendo (...) ->	2.List.ex
 MapSet.		# fazendo (...) ->	2.List.ex
 Keyword.	# fazendo (...) ->	2.List.ex
 Dict.		# fazendo (...)	->	2.List.ex
+---------------------------------------------------
+Access.		# fazendo (...)	->	3.Stream.ex
+Date.		# fazendo (...)	->	3.Stream.ex
+Date.Range	# fazendo (...)	->	3.Stream.ex
+DateTime.	# fazendo (...)	->	3.Stream.ex
+Range.		# fazendo (...)	->	3.Stream.ex
 Stream.		# fazendo (...)	->	3.Stream.ex
+---------------------------------------------------
 String.		# fazendo (...)	->	4.String.ex
 String.Chars.			->	4.String.ex
 StringIO.			->	4.String.ex
+------------------------------------------------------
 IO.		# fazendo (...)	->	6.InspectIO.ex
 IO.ANSI.	# fazendo (...)	->	6.InspectIO.ex
 IO.Stream	# fazendo (...)	->	6.InspectIO.ex
 Inspect.	# fazendo (...)	->	6.InspectIO.ex
 Inspect.Algebra.		->	6.InspectIO.ex
 Inspect.Opts	# fazendo (...)	->	6.InspectIO.ex
+------------------------------------------------------
 File.		# fazendo (...)	->	7.File.ex
 File.Stat.	# fazendo (...)	->	7.File.ex
 File.Stream	# fazendo (...)	->	7.File.ex
 
-Acess /?
+
 Agent.
 Application.
 Base.
-Behaviour.
+Behaviour.	DEPRECATED
 Bitwise.
 Calendar.
 Calendar.ISO.
 Code.
 Collectable.
-Date.
-Date.Range
-DateTime.
 Exception.
-GenEvent.Stream.
+GenEvent.Stream.	DEPRECATED
 GenServer.
-HashDict.
+HashDict.		DEPRECATED
 HashSet.
 Macro.
 Macro.Env.
@@ -60,7 +68,6 @@ Path.
 Port.
 Process.
 Protocol.
-Range.
 Record.
 Regex.
 Registry.
