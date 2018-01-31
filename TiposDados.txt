@@ -19,7 +19,6 @@ Map.		# fazendo (...) ->	2.List.ex
 Set.		# fazendo (...) ->	2.List.ex
 MapSet.		# fazendo (...) ->	2.List.ex
 Keyword.	# fazendo (...) ->	2.List.ex
-Dict.		# fazendo (...)	->	2.List.ex
 ---------------------------------------------------
 Access.		# fazendo (...)	->	3.Stream.ex
 Date.		# fazendo (...)	->	3.Stream.ex
@@ -42,50 +41,46 @@ Inspect.Opts	# fazendo (...)	->	6.InspectIO.ex
 File.		# fazendo (...)	->	7.File.ex
 File.Stat.	# fazendo (...)	->	7.File.ex
 File.Stream	# fazendo (...)	->	7.File.ex
+-------------------------------------------------------
+Dict.		# fazendo (...)	->	8.Deprecated.ex
+Behaviour.	# fazendo (...)	->	8.Deprecated.ex
+HashDict.	# fazendo (...)	->	8.Deprecated.ex
+-------------------------------------------------------
+Agent.		# fazendo (...)	->	9.Processes.ex
+Application.	# fazendo (...)	->	9.Processes.ex
+DynamicSupervisor		->	9.Processes.ex
+GenServer.	# fazendo (...)	->	9.Processes.ex
+Node.		# fazendo (...)	->	9.Processes.ex
+Process.	# fazendo (...)	->	9.Processes.ex
+Registry.	# fazendo (...)	->	9.Processes.ex
+Supervisor.	# fazendo (...)	->	9.Processes.ex
+Task.		# fazendo (...)	->	9.Processes.ex
+------------------------------------------------------
 
-
-Agent.
-Application.
 Base.
-Behaviour.	DEPRECATED
 Bitwise.
 Calendar.
 Calendar.ISO.
 Code.
 Collectable.
 Exception.
-GenEvent.Stream.	DEPRECATED
-GenServer.
-HashDict.		DEPRECATED
 HashSet.
 Macro.
 Macro.Env.
 Module.
 NaiveDateTime.
-Node.
 OptionParser.
 Path.
 Port.
-Process.
 Protocol.
 Record.
 Regex.
-Registry.
-Supervisor.
-Supervisor.Spec.
 System.
-Task.
-Task.Supervisor.
 Time.
 URI.
 Version.
 Version.Requirement.
 
-
-
-
-Kernel
-Kernel.SpecialForms
 
 BASIC TYPES
 	Atom
