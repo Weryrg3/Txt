@@ -11,6 +11,7 @@ Kernel.SpecialForms		->	0.Total.ex
 --------------------------------------------------
 Enum.		# fazendo (...)	->	1.Enum.ex
 Enumerable.	# fazendo (...)	->	1.Enum.ex
+Collectable.	# fazendo (...)	->	1.Enum.ex
 --------------------------------------------------
 List.		# fazendo (...)	->	2.List.ex
 List.Chars.			->	2.List.ex
@@ -28,8 +29,7 @@ Range.		# fazendo (...)	->	3.Stream.ex
 Stream.		# fazendo (...)	->	3.Stream.ex
 ---------------------------------------------------
 String.		# fazendo (...)	->	4.String.ex
-String.Chars.			->	4.String.ex
-StringIO.			->	4.String.ex
+Regex.		# fazendo (...)	->	4.String.ex
 ------------------------------------------------------
 IO.		# fazendo (...)	->	6.InspectIO.ex
 IO.ANSI.	# fazendo (...)	->	6.InspectIO.ex
@@ -56,30 +56,29 @@ Registry.	# fazendo (...)	->	9.Processes.ex
 Supervisor.	# fazendo (...)	->	9.Processes.ex
 Task.		# fazendo (...)	->	9.Processes.ex
 ------------------------------------------------------
+Base.		# fazendo (...)	->	10.Basic.ex
+Bitwise.	# fazendo (...)	->	10.Basic.ex
+Calendar.	# fazendo (...)	->	10.Basic.ex
+Exception.	# fazendo (...)	->	10.Basic.ex
+NaiveDateTime.	# fazendo (...)	->	10.Basic.ex
+Record.		# fazendo (...)	->	10.Basic.ex
+Time.		# fazendo (...)	->	10.Basic.ex
+URI.		# fazendo (...)	->	10.Basic.ex
+Version.	# fazendo (...)	->	10.Basic.ex
+---------------------------------------------------
+Code.		# fazendo (...)	->	11.Rest.ex
+HashSet.	# fazendo (...)	->	11.Rest.ex
+Macro.		# fazendo (...)	->	11.Rest.ex
+Macro.Env.	# fazendo (...)	->	11.Rest.ex
+Module.		# fazendo (...)	->	11.Rest.ex
+OptionParser.	# fazendo (...)	->	11.Rest.ex
+Path.		# fazendo (...)	->	11.Rest.ex
+Port.		# fazendo (...)	->	11.Rest.ex
+Protocol.	# fazendo (...)	->	11.Rest.ex
+System.		# fazendo (...)	->	11.Rest.ex
+--------------------------------------------------
+		# fazendo (...)	->	12.Earlang
 
-Base.
-Bitwise.
-Calendar.
-Calendar.ISO.
-Code.
-Collectable.
-Exception.
-HashSet.
-Macro.
-Macro.Env.
-Module.
-NaiveDateTime.
-OptionParser.
-Path.
-Port.
-Protocol.
-Record.
-Regex.
-System.
-Time.
-URI.
-Version.
-Version.Requirement.
 
 
 BASIC TYPES
