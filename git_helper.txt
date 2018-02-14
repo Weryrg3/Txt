@@ -10,3 +10,4 @@ criar repos local
     git commit -m "first commit"
     git remote add origin https://github.com/Weryrg3/example.git
     git push -u origin masterteste2
+teste3
