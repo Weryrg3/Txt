@@ -1,0 +1,12 @@
+Salva senha e user por 8 horas no terminal
+    git config --global credential.helper 'cache --timeout=28800'
+salva senha e user permanentemente no terminal
+    git config --global credential.helper cache
+
+criar repos local 
+    echo "# example" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git remote add origin https://github.com/Weryrg3/example.git
+    git push -u origin master
