@@ -1,0 +1,54 @@
+Test1
+Test2
+Test3
+Test4
+
+IEx.configure [inspect: [limit: :infinity]]
+
+sudo yum code
+sudo yum firefox
+
+yum atualiza programas
+
+yum list installed	-> mostra todos progrmas intalados
+rmp -qa			-> mostra todos progrmas intalados
+rpm -qa | sort > pkgs	-> mostra todos progrmas intalados
+
+Fira code
+
+rpm -ivh nome_do_pacote.rpm	instala programa em rpm
+rpm -ivh nome_do_pacote.rpm --force -> arriscado usar
+
+zsh
+oh my zsh
+
+nautilus .	abri pasta
+
+Elixir ###################################################################
+
+#iex:break
+
+require IEx
+IEx pry
+
+coverex
+credo
+
+mix credo --strict
+mix test --cover
+
+Gráfico das funções em um mix
+
+mix xref graph --format dot
+dot -Grankdir=LR -Epenwidth=2 -Ecolor=#a0a0a0 \
+-Tpng xref_graph.dot -o xref_graph.png
+
+Visual studio:
+	ctrl + espaço
+	Tab
+
+intalar pacote rpm
+	sudo rpm -i nome_pacote
+atualizar pacote rpm
+	sudo rpm -U nome_pacote
+
