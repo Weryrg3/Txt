@@ -1,0 +1,7 @@
+sudo -u postgres psql
+
+psql -U wesley -d postgres
+
+systemctl restart postgresql
+
+http://www.tecnologiabasica.com.br/2017/05/instalando-e-configurando-o-postgresql.html

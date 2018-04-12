@@ -52,3 +52,9 @@ intalar pacote rpm
 atualizar pacote rpm
 	sudo rpm -U nome_pacote
 
+ctrl + espaço
+tab
+
+
+
+
