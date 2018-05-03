@@ -5,3 +5,7 @@ psql -U wesley -d postgres
 systemctl restart postgresql
 
 http://www.tecnologiabasica.com.br/2017/05/instalando-e-configurando-o-postgresql.html
+
+psql -h localhost -U postgres -D postgres rumbl_dev
+
+ALTER TABLE users RENAME COLUMN password_hase TO password_hash;

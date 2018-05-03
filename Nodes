@@ -1,0 +1,36 @@
+iex --sname client1 -S mix
+
+Node.connect :"client2@wesley-pc"
+Node.connect :"client3@wesley-pc"
+Node.connect :"client4@wesley-pc"
+
+Node.connect :"client5@wesley-pc"
+Node.connect :"client6@wesley-pc"
+Node.connect :"client7@wesley-pc"
+Node.connect :"client8@wesley-pc"
+Node.connect :"client9@wesley-pc"
+Node.connect :"client10@wesley-pc"
+
+Chat.Room.iniciar_room("Sala1", "Wesley")
+Chat.Room.iniciar_room("Sala1", "Pedro")
+Chat.Room.iniciar_room("Sala1", "Ana")
+Chat.Room.iniciar_room("Sala1", "Rafaela")
+
+clear
+
+test
+
+test4
+
+Loop enviar mensagens, irá receber um send do receber mensagens, que irá enviar um send para controlador, acumulador deve ter quatro argumentos
+(new_pid \\ nil, main_pid, acc, pids)
+
+Map.drop(map1, Map.keys(map2))
+
+sendo map1 o acc de todas keys novos exceção do main
+sendo map2 todas as keys
+
+Chat3
+lista duplamente encadeada
+cada cliente terá salvo em sua memoria o proximo cliente e o anterior
+
