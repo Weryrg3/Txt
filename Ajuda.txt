@@ -22,7 +22,7 @@ rpm -ivh nome_do_pacote.rpm --force -> arriscado usar
 zsh
 oh my zsh
 
-nautilus .	abri pasta
+nautilus .	abre pasta
 
 Elixir ###################################################################
 

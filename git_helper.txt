@@ -9,3 +9,11 @@ criar repos local
     git add README.md
     git commit -m "first commit"
     git remote add origin https://github.com/Weryrg3/example.git
+
+
+remover .git
+git rm test --cached
+git add issues
+git status
+git commit -m "new"
+git push
