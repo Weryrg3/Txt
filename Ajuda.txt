@@ -40,8 +40,7 @@ mix test --cover
 Gráfico das funções em um mix
 
 mix xref graph --format dot
-dot -Grankdir=LR -Epenwidth=2 -Ecolor=#a0a0a0 \
--Tpng xref_graph.dot -o xref_graph.png
+dot -Grankdir=LR -Epenwidth=2 -Ecolor=#a0a0a0 -Tpng xref_graph.dot -o xref_graph.png
 
 Visual studio:
 	ctrl + espaço
