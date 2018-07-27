@@ -1,0 +1,11 @@
+chmod +x example.sh
+
+sh example.sh
+./example.sh
+
+#!/bin/zsh
+
+
+
+
+
